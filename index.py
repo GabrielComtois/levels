@@ -16,3 +16,12 @@ app = Flask(__name__)
 @app.route('/')
 def home_page():
     return render_template('form.html')
+
+@app.route('/level1/<counter>')
+def level1(counter):
+    return render_template("newLevel1.html", counter=counter)
+
+@app.route('/submit', methods=['POST'])
+def submit():
+
+    return "", 201

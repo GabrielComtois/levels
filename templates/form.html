@@ -2,30 +2,27 @@
 <html>
 <head>
     <meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="/static/css/css.css">
+	   <link rel="stylesheet" type="text/css" href="/static/css/css.css">
     <title>Bot</title>
 </head>
 <body>
-<form action="" method="post">
+<form action="/submit" method="post">
 	<div class="center">
 		<table id="tableLevel1">
-			<tbody>
 				<tr>
 					<td id="td1Level1">
 					&bull;
 					<input type="text" id="1Level1Nom" name="Level1" size="20" placeholder="Level Name">
 					<input type="text" id="1Level1Keyword1" name="Level1" size="20" placeholder="Keyword">
 					<input type="text" id="1Level1Action" name="Level1" size="20" placeholder="Action">
-					<button class="buttonLevel1" type="button">add</button>
+					<button id="1Level1addbtn"type="button" onclick="addLevel1(this.id);">add</button>
 					</td>
 				</tr>
-			</tbody>
 		</table>
 		<br><br>
 		<input class="submit" align="bottom" type="submit" value="Exporter Json">
 	</div>
 </form>
-<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="/static/js/javascript.js"></script>
 </body>
 </html>
