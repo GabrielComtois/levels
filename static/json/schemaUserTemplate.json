@@ -1,0 +1,152 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "title": "Set of Level 1",
+  "description": "A set of level 1",
+  "type": "array",
+  "minItems": 1,
+  "uniqueItems": true,
+  "items": {
+    "title": "Level1Name",
+    "Level1Name": "string",
+    "type": "object",
+    "properties": {
+      "level1Keywords": {
+        "description": "Set of keywords",
+        "type": "array",
+        "uniqueItems": true,
+        "minItems": 1,
+        "items": {
+          "type": "string"
+        }
+      },
+      "level1Action": {
+        "description": "Action to do if selected",
+        "type": "string"
+      },
+      "level1level2": {
+        "description": "A set of level 2",
+        "type": "array",
+        "minItems": 1,
+        "uniqueItems": true,
+        "items": {
+          "title": "Level2Name",
+          "type": "object",
+          "properties": {
+            "level2Keywords": {
+              "description": "Set of keywords",
+              "type": "array",
+              "minItems": 1,
+              "uniqueItems": true,
+              "items": {
+                "type": "string"
+              }
+            },
+            "level2Action": {
+              "description": "Action to do if selected",
+              "type": "string"
+            },
+            "level2level3": {
+              "description": "A set of level 3",
+              "type": "array",
+              "minItems": 1,
+              "uniqueItems": true,
+              "items": {
+                "title": "Level3Name",
+                "type": "object",
+                "properties": {
+                  "level3Keywords": {
+                    "description": "Set of keywords",
+                    "type": "array",
+                    "uniqueItems": true,
+                    "minItems": 1,
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "level3Action": {
+                    "description": "Action to do if selected",
+                    "type": "string"
+                  },
+                  "level3level4": {
+                    "description": "A set of level 4",
+                    "type": "array",
+                    "minItems": 1,
+                    "uniqueItems": true,
+                    "items": {
+                      "title": "Level4Name",
+                      "type": "object",
+                      "properties": {
+                        "level4Keywords": {
+                          "description": "Set of keywords",
+                          "type": "array",
+                          "uniqueItems": true,
+                          "minItems": 1,
+                          "items": {
+                            "type": "string"
+                          }
+                        },
+                        "level4Action": {
+                          "description": "Action to do if selected",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "level4Keywords",
+                        "level4Action"
+                      ]
+                    }
+                  }
+                },
+                "required": [
+                  "level3Keywords"
+                ],
+                "oneOf": [
+                  {
+                    "required": [
+                      "level3Action"
+                    ]
+                  },
+                  {
+                    "required": [
+                      "level3level4"
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "required": [
+            "level2Keywords"
+          ],
+          "oneOf": [
+            {
+              "required": [
+                "level2Action"
+              ]
+            },
+            {
+              "required": [
+                "level2level3"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "required": [
+      "level1Keywords"
+    ],
+    "oneOf": [
+      {
+        "required": [
+          "level1Action"
+        ]
+      },
+      {
+        "required": [
+          "level1level2"
+        ]
+      }
+    ]
+  }
+}

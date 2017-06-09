@@ -1,0 +1,31 @@
+[
+  {
+    "level1Keywords": [
+      "software"
+    ],
+    "level1level2": [
+      {
+        "Level2Name": "Visio",
+        "level2Keywords": [
+          "diagram"
+        ],
+        "level2level3": [
+          {
+            "Level3Name": "Progr.",
+            "level3Keywords": [
+              "python"
+            ],
+          
+            "level3level4": [
+              {
+                "Level4Name": "Stuff",
+                "level4Keywords": ["java"],
+                "level4Action": "install"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
