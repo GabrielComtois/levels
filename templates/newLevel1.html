@@ -1,9 +1,14 @@
 <tr id="tr{{ counterLevel1 }}Level1">
 	<td id="td{{ counterLevel1 }}Level1">
 	&bull;
-	<input type="text" id="{{ counterLevel1 }}Level1Nom" name="Level1" size="20" placeholder="Level Name">
-	<input type="text" id="{{ counterLevel1 }}Level1Keyword1" name="Level1" size="20" placeholder="Keyword">
-	<input type="text" id="{{ counterLevel1 }}Level1Action" name="Level1" size="20" placeholder="Action">
-	<button id="{{ counterLevel1 }}Level1rembtn" type="button" onclick="removeLevel1(this.id);">remove</button>	
-	</td>
+	<input type="text" id="{{ counterLevel1 }}Level1Nom" name="{{ counterLevel1 }}Level1Nom" size="20" placeholder="Level Name">
+	<input type="text" id="{{ counterLevel1 }}Level1Keyword1" name="{{ counterLevel1 }}Level1Keyword" size="20" placeholder="keyword1, keyword2">
+	<input type="text" id="{{ counterLevel1 }}Level1Action" name="{{ counterLevel1 }}Level1Action" size="20" placeholder="Action">
+	<button id="{{ counterLevel1 }}Level1rembtn" type="button" onclick="removeLevel1(this.id);">remove</button>
+	<tr id="tr{{ counterLevel1 }}Level1">
+		<td id="td{{ counterLevel1 }}Level11Level2">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;
+			<button id="{{ counterLevel1 }}Level11Level2addbtn" type="button" onclick="addLevel2(this.id);">add</button>
+		</td>
+	</tr>
 </tr>

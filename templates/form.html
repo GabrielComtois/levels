@@ -12,15 +12,21 @@
 				<tr>
 					<td id="td1Level1">
 					&bull;
-					<input type="text" id="1Level1Nom" name="Level1" size="20" placeholder="Level Name">
-					<input type="text" id="1Level1Keyword1" name="Level1" size="20" placeholder="Keyword">
-					<input type="text" id="1Level1Action" name="Level1" size="20" placeholder="Action">
+					<input type="text" id="1Level1Nom" name="1Level1Nom" size="20" placeholder="Level Name">
+					<input type="text" id="1Level1Keyword1" name="1Level1Keyword" size="20" placeholder="keyword1, keyword2">
+					<input type="text" id="1Level1Action" name="1Level1Action" size="20" placeholder="Action">
 					<button id="1Level1addbtn"type="button" onclick="addLevel1(this.id);">add</button>
+          <tr id="tr1Level1">
+            <td id="td1Level11Level2">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;
+              <button id="1Level11Level2addbtn" type="button" onclick="addLevel2(this.id);">add</button>
+            </td>
+          </tr>
 					</td>
 				</tr>
 		</table>
 		<br><br>
-		<input class="submit" align="bottom" type="submit" value="Exporter Json">
+		<input class="submit" align="bottom" type="submit" value="Export Json">
 	</div>
 </form>
 <script src="/static/js/javascript.js"></script>

@@ -30,6 +30,7 @@
         "uniqueItems": true,
         "items": {
           "title": "Level2Name",
+          "Level2Name": "string",
           "type": "object",
           "properties": {
             "level2Keywords": {
@@ -52,6 +53,7 @@
               "uniqueItems": true,
               "items": {
                 "title": "Level3Name",
+                "Level3Name": "string",
                 "type": "object",
                 "properties": {
                   "level3Keywords": {
