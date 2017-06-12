@@ -1,6 +1,7 @@
-var counter = 1;
+var counterLevel1 = 1;
+var counterLevel2 = 0;
 function addLevel1(clickedId) {
-		counter++;
+		counterLevel1++;
     var xhr = new XMLHttpRequest();
 
     xhr.onreadystatechange = function() {
@@ -15,7 +16,7 @@ function addLevel1(clickedId) {
         }
     };
 
-    xhr.open("GET", "/level1/" + counter, true);
+    xhr.open("GET", "/level1/" + counterLevel1, true);
     xhr.send();
 
 }
