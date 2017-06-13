@@ -30,6 +30,7 @@ function addLevel1(clickedId) {
 
 function addLevel2(clickedId) {
 		counterLevel2++;
+		var lvl1 = clickedId.charAt(0);
 		var xhr = new XMLHttpRequest();
 
 		xhr.onreadystatechange = function() {
@@ -49,13 +50,16 @@ function addLevel2(clickedId) {
 				}
 		};
 
-		xhr.open("GET", "/level2/" + counterLevel1 + "/" + counterLevel2, true);
+		xhr.open("GET", "/level2/" + lvl1 + "/" + counterLevel2, true);
     xhr.send();
 
 }
 
 function addLevel3(clickedId) {
 		counterLevel3++;
+		var lvl1 = clickedId.charAt(0);
+		var lvl2 = clickedId.replace(/\b[0-9]+Level[0-9]/, '');
+		lvl2 = lvl2.replace(/Level[0-9]addbtn\b/, '');
 		var xhr = new XMLHttpRequest();
 
 		xhr.onreadystatechange = function() {
@@ -74,7 +78,7 @@ function addLevel3(clickedId) {
 				}
 		};
 
-		xhr.open("GET", "/level3/" + counterLevel1 + "/" + counterLevel2 + "/" + counterLevel3, true);
+		xhr.open("GET", "/level3/" + lvl1 + "/" + lvl2 + "/" + counterLevel3, true);
     xhr.send();
 
 }

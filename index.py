@@ -97,6 +97,5 @@ def submit():
                             tabJsonLevel2.append(objectLevel2)
                 objectLevel1['level1level2'] = tabJsonLevel2
                 tabJsonLevel1.append(objectLevel1)
-        print objectLevel1
     finalJson = json.dumps(tabJsonLevel1)
     return finalJson, 201
