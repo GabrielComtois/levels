@@ -8,7 +8,6 @@ function addLevel1(clickedId) {
     xhr.onreadystatechange = function() {
         if (xhr.readyState === XMLHttpRequest.DONE) {
             if (xhr.status === 200) {
-								console.log(clickedId);
                 var table = document.createElement('table');
 								table.id = "table" + counterLevel1 + "Level1";
 								var response = xhr.responseText.split('ici');
@@ -49,10 +48,9 @@ function addLevel2(clickedId) {
 						}
 				}
 		};
-
+		
 		xhr.open("GET", "/level2/" + lvl1 + "/" + counterLevel2, true);
     xhr.send();
-
 }
 
 function addLevel3(clickedId) {
@@ -85,7 +83,6 @@ function addLevel3(clickedId) {
 
 
 function rmvLevel1(clickedId) {
-	console.log(clickedId);
 		var elem = document.getElementById(clickedId).parentElement.parentElement.parentElement.parentElement;
 		elem.parentNode.removeChild(elem);
 }

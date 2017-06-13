@@ -14,21 +14,26 @@ import json
 app = Flask(__name__)
 maxNumberOfLevelsID = 20
 
+
 @app.route('/')
 def home_page():
     return render_template('form.html')
+
 
 @app.route('/level1/<counterLevel1>')
 def level1(counterLevel1):
     return render_template("newLevel1.html", counterLevel1=counterLevel1)
 
+
 @app.route('/level2/<counterLevel1>/<counterLevel2>')
 def level2(counterLevel1, counterLevel2):
     return render_template("newLevel2.html", counterLevel1=counterLevel1, counterLevel2=counterLevel2)
 
+
 @app.route('/level3/<counterLevel1>/<counterLevel2>/<counterLevel3>')
 def level3(counterLevel1, counterLevel2, counterLevel3):
     return render_template("newLevel3.html", counterLevel1=counterLevel1, counterLevel2=counterLevel2, counterLevel3=counterLevel3)
+
 
 @app.route('/submit', methods=['POST'])
 def submit():

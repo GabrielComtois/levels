@@ -1,39 +1,82 @@
 [
   {
-    "Level1Name": "BasicName",
+    "level1Name": "Top Intent",
     "level1Keywords": [
-      "software"
+      "Message Comes In"
     ],
     "level1level2": [
       {
-        "Level2Name": "Visio",
         "level2Keywords": [
-          "diagram"
+          "software",
+          " license"
         ],
         "level2level3": [
           {
-            "Level3Name": "Progr.",
+            "level3Action": "visio",
+            "level3Name": "Visio",
             "level3Keywords": [
-              "python"
-            ],
-
-            "level3level4": [
-              {
-                "Level4Name": "Stuff",
-                "level4Keywords": ["java"],
-                "level4Action": "install"
-              }
+              "diagrams",
+              " flowchart"
+            ]
+          },
+          {
+            "level3Action": "prog. environment",
+            "level3Name": "Programming Environment",
+            "level3Keywords": [
+              "python",
+              " java"
             ]
           }
-        ]
+        ],
+        "level2Name": "Intent for new software"
+      },
+      {
+        "level2Keywords": [
+          "password",
+          " reset"
+        ],
+        "level2Action": "Send password reset link",
+        "level2Name": "Send password reset link"
+      },
+      {
+        "level2Keywords": [
+          "move",
+          " change"
+        ],
+        "level2level3": [
+          {
+            "level3Action": "fill out the form",
+            "level3Name": "fill out the move form...",
+            "level3Keywords": [
+              "building"
+            ]
+          },
+          {
+            "level3Action": "fill out the form",
+            "level3Name": "fill out the move form...",
+            "level3Keywords": [
+              "city"
+            ]
+          }
+        ],
+        "level2Name": "Intent for moving location"
+      },
+      {
+        "level2Keywords": [
+          "video",
+          "audio",
+          " conference"
+        ],
+        "level2Action": "Ask the user to clarify sub-topic",
+        "level2Name": "Ask the user to clarify sub-topic"
+      },
+      {
+        "level2Keywords": [
+          "non-helpdesk related"
+        ],
+        "level2Action": "Small-talk engines",
+        "level2Name": "Small-talk engines"
       }
     ]
-  },
-  {
-    "Level1Name": "SecondName",
-    "level1Keywords": [
-      "hardware"
-    ],
-    "level1Action": "download"
   }
 ]
