@@ -12,8 +12,7 @@ import re
 import json
 
 app = Flask(__name__)
-maxNumberOfLevelsID = 10
-maxNumberOfKeywords = 15
+maxNumberOfLevelsID = 20
 
 @app.route('/')
 def home_page():
@@ -23,15 +22,20 @@ def home_page():
 def level1(counterLevel1):
     return render_template("newLevel1.html", counterLevel1=counterLevel1)
 
-@app.route('/level2/<counterLevel2>')
-def level2(counterLevel2):
-    return render_template("newLevel2.html", counterLevel2=counterLevel2)
+@app.route('/level2/<counterLevel1>/<counterLevel2>')
+def level2(counterLevel1, counterLevel2):
+    return render_template("newLevel2.html", counterLevel1=counterLevel1, counterLevel2=counterLevel2)
+
+@app.route('/level3/<counterLevel1>/<counterLevel2>/<counterLevel3>')
+def level3(counterLevel1, counterLevel2, counterLevel3):
+    return render_template("newLevel3.html", counterLevel1=counterLevel1, counterLevel2=counterLevel2, counterLevel3=counterLevel3)
 
 @app.route('/submit', methods=['POST'])
 def submit():
-    jsonData = []
+    tabJsonLevel1 = []
     for x in range(1, maxNumberOfLevelsID):
-        data = {}
+        objectLevel1 = {}
+
         level1name = request.form.get(str(x) + 'Level1Nom', None)
 
         tablevel1keyword = []
@@ -41,16 +45,58 @@ def submit():
 
         level1action = request.form.get(str(x) + 'Level1Action', None)
 
-        if level1name and tablevel1keyword: # if level1, keyword entered
-            if level1action: # avec action
-                print level1name + level1action
-                print tablevel1keyword
-                data[str(x) + 'Level1Name'] = level1name# premier objet json
-                data[str(x) + 'level1Action'] = level1action
-                data[str(x) + 'Level1Keywords'] = json.dumps(tablevel1keyword)
-                jsonData.append(data)
-            else: # sans action (level 2)
+        if level1name and tablevel1keyword:
+            objectLevel1['level1Keywords'] = tablevel1keyword
+            objectLevel1['level1Name'] = level1name
+            if level1action:
+                objectLevel1['level1Action'] = level1action
+                tabJsonLevel1.append(objectLevel1)
+            else:
+                tabJsonLevel2 = []
+                for y in range(1, maxNumberOfLevelsID):
+                    objectLevel2 = {}
+                    level2name = request.form.get(str(x) + 'Level1' + str(y) + 'Level2Nom', None)
 
-                print "sans action"
-    finalJson = json.dumps(jsonData)
+                    tablevel2keyword = []
+                    level2keyword = request.form.get(str(x) + 'Level1' + str(y) + 'Level2Keyword', None)
+                    if level2keyword:
+                        tablevel2keyword = level2keyword.split(',')
+
+                    level2action = request.form.get(str(x) + 'Level1' + str(y) + 'Level2Action', None)
+
+                    if level2name and tablevel2keyword:
+                        objectLevel2['level2Name'] = level2name
+                        objectLevel2['level2Keywords'] = tablevel2keyword
+                        if level2action:
+                            objectLevel2['level2Action'] = level2action
+                            tabJsonLevel2.append(objectLevel2)
+
+                        else:
+                            tabJsonLevel3 = []
+                            for z in range(1, maxNumberOfLevelsID):
+                                objectLevel3 = {}
+                                level3name = request.form.get(str(x) + 'Level1' + str(y) + 'Level2' + str(z) + 'Level3Nom', None)
+
+                                tablevel3keyword = []
+                                level3keyword = request.form.get(str(x) + 'Level1' + str(y) + 'Level2' + str(z) + 'Level3Keyword', None)
+                                if level3keyword:
+                                    tablevel3keyword = level3keyword.split(',')
+
+                                level3action = request.form.get(str(x) + 'Level1' + str(y) + 'Level2' + str(z) + 'Level3Action', None)
+
+                                if level3name and tablevel3keyword:
+                                    objectLevel3['level3Name'] = level3name
+                                    objectLevel3['level3Keywords'] = tablevel3keyword
+                                    if level3action:
+                                        objectLevel3['level3Action'] = level3action
+                                        tabJsonLevel3.append(objectLevel3)
+
+                                    else:
+                                        print "level 4"
+                            objectLevel2['level2level3'] = tabJsonLevel3
+                            tabJsonLevel2.append(objectLevel2)
+                objectLevel1['level1level2'] = tabJsonLevel2
+                tabJsonLevel1.append(objectLevel1)
+        print objectLevel1
+    finalJson = json.dumps(tabJsonLevel1)
     return finalJson, 201

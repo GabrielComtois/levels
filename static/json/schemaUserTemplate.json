@@ -6,8 +6,8 @@
   "minItems": 1,
   "uniqueItems": true,
   "items": {
-    "title": "Level1Name",
-    "Level1Name": "string",
+    "title": "level1Name",
+    "level1Name": "string",
     "type": "object",
     "properties": {
       "level1Keywords": {
@@ -30,7 +30,7 @@
         "uniqueItems": true,
         "items": {
           "title": "Level2Name",
-          "Level2Name": "string",
+          "level2Name": "string",
           "type": "object",
           "properties": {
             "level2Keywords": {
@@ -53,7 +53,7 @@
               "uniqueItems": true,
               "items": {
                 "title": "Level3Name",
-                "Level3Name": "string",
+                "level3Name": "string",
                 "type": "object",
                 "properties": {
                   "level3Keywords": {
@@ -76,6 +76,7 @@
                     "uniqueItems": true,
                     "items": {
                       "title": "Level4Name",
+                      "level4Name": "string",
                       "type": "object",
                       "properties": {
                         "level4Keywords": {
@@ -94,13 +95,15 @@
                       },
                       "required": [
                         "level4Keywords",
-                        "level4Action"
+                        "level4Action",
+                        "level4Name"
                       ]
                     }
                   }
                 },
                 "required": [
-                  "level3Keywords"
+                  "level3Keywords",
+                  "level3Name"
                 ],
                 "oneOf": [
                   {
@@ -118,7 +121,8 @@
             }
           },
           "required": [
-            "level2Keywords"
+            "level2Keywords",
+            "level2Name"
           ],
           "oneOf": [
             {
@@ -136,7 +140,8 @@
       }
     },
     "required": [
-      "level1Keywords"
+      "level1Keywords",
+      "level1Name"
     ],
     "oneOf": [
       {

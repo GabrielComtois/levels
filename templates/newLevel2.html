@@ -1,9 +1,15 @@
-<tr id="tr{{ counterLevel2 }}Level2">
-	<td id="td{{ counterLevel2 }}Level2">
-	&bull;
-	<input type="text" id="{{ counterLevel2 }}Level2Nom" name="Level2" size="20" placeholder="Level Name">
-	<input type="text" id="{{ counterLevel2 }}Level2Keyword1" name="Level2" size="20" placeholder="Keyword">
-	<input type="text" id="{{ counterLevel2 }}Level2Action" name="Level2" size="20" placeholder="Action">
-	<button id="{{ counterLevel2 }}Level2rembtn" type="button" onclick="removeLevel2(this.id);">remove</button>
+<tr id="tr{{ counterLevel1 }}Level1{{ counterLevel2 }}Level2">
+	<td id="td{{ counterLevel1 }}Level1{{ counterLevel2 }}Level2">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;
+	<input type="text" id="{{ counterLevel1 }}Level1{{ counterLevel2 }}Level2Nom" name="{{ counterLevel1}}Level1{{ counterLevel2 }}Level2Nom" size="20" placeholder="Level 2 Name">
+	<input type="text" id="{{ counterLevel1 }}Level1{{ counterLevel2 }}Level2Keyword1" name="{{ counterLevel1}}Level1{{ counterLevel2 }}Level2Keyword" size="20" placeholder="keyword1, keyword2">
+	<input type="text" id="{{ counterLevel1 }}Level1{{ counterLevel2 }}Level2Action" name="{{ counterLevel1}}Level1{{ counterLevel2 }}Level2Action" size="20" placeholder="Action">
+	</td>
+</tr>
+ici
+<tr id="2tr{{ counterLevel1 }}Level1{{ counterLevel2 }}Level2">
+	<td id="2td{{ counterLevel1 }}Level1{{ counterLevel2 }}Level2">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;
+			<button id="{{ counterLevel1 }}Level1{{ counterLevel2 }}Level2addbtn" type="button" onclick="addLevel3(this.id);">add</button>
 	</td>
 </tr>

@@ -1,5 +1,6 @@
 [
   {
+    "Level1Name": "BasicName",
     "level1Keywords": [
       "software"
     ],
@@ -15,7 +16,7 @@
             "level3Keywords": [
               "python"
             ],
-          
+
             "level3level4": [
               {
                 "Level4Name": "Stuff",
@@ -27,5 +28,12 @@
         ]
       }
     ]
+  },
+  {
+    "Level1Name": "SecondName",
+    "level1Keywords": [
+      "hardware"
+    ],
+    "level1Action": "download"
   }
 ]
