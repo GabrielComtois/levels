@@ -35,6 +35,11 @@ def level3(counterLevel1, counterLevel2, counterLevel3):
     return render_template("newLevel3.html", counterLevel1=counterLevel1, counterLevel2=counterLevel2, counterLevel3=counterLevel3)
 
 
+@app.route('/level4/<lvl1>/<lvl2>/<lvl3>/<lvl4>')
+def level4(lvl1, lvl2, lvl3, lvl4):
+    return render_template("newLevel4.html", lvl1=lvl1, lvl2=lvl2, lvl3=lvl3, lvl4=lvl4 )
+
+
 @app.route('/submit', methods=['POST'])
 def submit():
     tabJsonLevel1 = []
@@ -97,7 +102,26 @@ def submit():
                                         tabJsonLevel3.append(objectLevel3)
 
                                     else:
-                                        print "level 4"
+                                        tabJsonLevel4 = []
+                                        for a in range(1, maxNumberOfLevelsID):
+                                            objectLevel4 = {}
+                                            level4name = request.form.get(str(x) + 'Level1' + str(y) + 'Level2' + str(z) + 'Level3' + str(a) + 'Level4Nom', None)
+
+                                            tablevel4keyword = []
+                                            level4keyword = request.form.get(str(x) + 'Level1' + str(y) + 'Level2' + str(z) + 'Level3' + str(a) + 'Level4Keyword', None)
+                                            if level4keyword:
+                                                tablevel4keyword = level4keyword.split(',')
+
+                                            level4action = request.form.get(str(x) + 'Level1' + str(y) + 'Level2' + str(z) + 'Level3' + str(a) + 'Level4Action', None)
+
+                                            if level4name and tablevel4keyword:
+                                                objectLevel4['level4Name'] = level4name
+                                                objectLevel4['level4Keywords'] = tablevel4keyword
+                                                if level4action:
+                                                    objectLevel4['level4Action'] = level4action
+                                                    tabJsonLevel4.append(objectLevel4)
+                                        objectLevel3['level3level4'] = tabJsonLevel4
+                                        tabJsonLevel3.append(objectLevel3)
                             objectLevel2['level2level3'] = tabJsonLevel3
                             tabJsonLevel2.append(objectLevel2)
                 objectLevel1['level1level2'] = tabJsonLevel2

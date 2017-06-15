@@ -1,0 +1,18 @@
+[
+   {
+      "level1Name":"test1",
+      "level1Keywords":[
+         "kw1",
+         " kw2"
+      ],
+      "level1Action":"download"
+   },
+   {
+      "level1Name":"test2",
+      "level1Keywords":[
+         "2kw1",
+         " 2kw2"
+      ],
+      "level1Action":"install"
+   }
+]

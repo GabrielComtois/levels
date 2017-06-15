@@ -1,0 +1,50 @@
+[
+   {
+      "level1Name":"test1",
+      "level1Keywords":[
+         "kw1",
+         " kw2"
+      ],
+      "level1level2":[
+         {
+            "level2Keywords":[
+               "kwkw1",
+               " kwkw2"
+            ],
+            "level2level3":[
+               {
+                  "level3Action":"hard",
+                  "level3Name":"testtesttest1",
+                  "level3Keywords":[
+                     "kwkwkw1"
+                  ]
+               }
+            ],
+            "level2Name":"testtest1"
+         },
+         {
+            "level2Keywords":[
+               "kwkw3"
+            ],
+            "level2Action":"difficult",
+            "level2Name":"testtest2"
+         }
+      ]
+   },
+   {
+      "level1Name":"test2",
+      "level1Keywords":[
+         "kw3",
+         " kw4"
+      ],
+      "level1level2":[
+         {
+            "level2Keywords":[
+               "kwkw4"
+            ],
+            "level2Action":"dur",
+            "level2Name":"testtest3"
+         }
+      ]
+   }
+]
