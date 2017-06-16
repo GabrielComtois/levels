@@ -2,33 +2,34 @@
 <html>
 <head>
     <meta charset="utf-8">
-	   <link rel="stylesheet" type="text/css" href="/static/css/css.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" href="/static/css/css.css">
     <title>Bot</title>
 </head>
-<body>
+<body style="background-color:#e0e0eb;">
 <form action="/submit" method="post">
-	<div class="center">
+	<div class="container-fluid">
     <div>
-  		<table id="table1Level1">
+  		<table id="table1Level1" class="city">
   				<tr id="1tr1Level1">
   					<td id="td1Level1">
   					&bull;
-  					<input type="text" id="1Level1Nom" name="1Level1Nom" size="20" placeholder="Level 1 Name">
-  					<input type="text" id="1Level1Keyword1" name="1Level1Keyword" size="20" placeholder="keyword1, keyword2">
-  					<input type="text" id="1Level1Action" name="1Level1Action" size="20" placeholder="Action">
-  					<button id="1Level1addbtn" type="button" onclick="addLevel1(this.id);">add level 1</button>
+  					<input type="text" class="form-group" id="1Level1Nom" name="1Level1Nom" size="20" placeholder="Level 1 Name">
+  					<input type="text" class="form-group" id="1Level1Keyword1" name="1Level1Keyword" size="20" placeholder="keyword1, keyword2">
+  					<input type="text" class="form-group" id="1Level1Action" name="1Level1Action" size="20" placeholder="Action">
+  					<button id="1Level1addbtn" type="button" class="btn btn-default" onclick="addLevel1(this.id);">add level 1</button>
             </td>
           </tr>
           <tr id="2tr1Level1">
             <td id="td1Level11Level2">
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull;
-              <button id="1Level11Level2addbtn" type="button" onclick="addLevel2(this.id);">add level 2</button>
+              <button id="1Level11Level2addbtn" type="button" class="btn btn-default" onclick="addLevel2(this.id);">add level 2</button>
             </td>
           </tr>
   		</table>
     </div>
   <br><br>
-  <input class="submit" class="center" align="bottom" type="submit" value="Export Json">
+  <input class="text-center btn btn-default submit" type="submit" value="Export Json">
 	</div>
 
 </form>

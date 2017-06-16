@@ -20,19 +20,19 @@ def home_page():
     return render_template('form.html')
 
 
-@app.route('/level1/<counterLevel1>')
-def level1(counterLevel1):
-    return render_template("newLevel1.html", counterLevel1=counterLevel1)
+@app.route('/level1/<lvl1>')
+def level1(lvl1):
+    return render_template("newLevel1.html", lvl1=lvl1)
 
 
-@app.route('/level2/<counterLevel1>/<counterLevel2>')
-def level2(counterLevel1, counterLevel2):
-    return render_template("newLevel2.html", counterLevel1=counterLevel1, counterLevel2=counterLevel2)
+@app.route('/level2/<lvl1>/<lvl2>')
+def level2(lvl1, lvl2):
+    return render_template("newLevel2.html", lvl1=lvl1, lvl2=lvl2)
 
 
-@app.route('/level3/<counterLevel1>/<counterLevel2>/<counterLevel3>')
-def level3(counterLevel1, counterLevel2, counterLevel3):
-    return render_template("newLevel3.html", counterLevel1=counterLevel1, counterLevel2=counterLevel2, counterLevel3=counterLevel3)
+@app.route('/level3/<lvl1>/<lvl2>/<lvl3>')
+def level3(lvl1, lvl2, lvl3):
+    return render_template("newLevel3.html", lvl1=lvl1, lvl2=lvl2, lvl3=lvl3)
 
 
 @app.route('/level4/<lvl1>/<lvl2>/<lvl3>/<lvl4>')

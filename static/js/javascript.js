@@ -12,6 +12,7 @@ function addLevel1(clickedId) {
             if (xhr.status === 200) {
                 var table = document.createElement('table');
 								table.id = "table" + counterLevel1 + "Level1";
+								table.className += "city";
 								var response = xhr.responseText.split('ici');
 								var row1 = table.insertRow(0);
 								row1.innerHTML = response[0];
