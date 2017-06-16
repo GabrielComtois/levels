@@ -12,7 +12,7 @@ import re
 import json
 
 app = Flask(__name__)
-maxNumberOfLevelsID = 20
+maxNumberOfLevelsID = 100
 
 
 @app.route('/')
