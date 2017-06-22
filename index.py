@@ -52,6 +52,8 @@ def submit():
         level1keyword = request.form.get(str(x) + 'Level1Keyword', None)
         if level1keyword:
             tablevel1keyword = level1keyword.split(',')
+        for i, each in enumerate(tablevel1keyword):
+            tablevel1keyword[i] = each.strip().lower()
 
         level1action = request.form.get(str(x) + 'Level1Action', None)
 
@@ -71,6 +73,8 @@ def submit():
                     level2keyword = request.form.get(str(x) + 'Level1' + str(y) + 'Level2Keyword', None)
                     if level2keyword:
                         tablevel2keyword = level2keyword.split(',')
+                    for i, each in enumerate(tablevel2keyword):
+                        tablevel2keyword[i] = each.strip().lower()
 
                     level2action = request.form.get(str(x) + 'Level1' + str(y) + 'Level2Action', None)
 
@@ -91,6 +95,8 @@ def submit():
                                 level3keyword = request.form.get(str(x) + 'Level1' + str(y) + 'Level2' + str(z) + 'Level3Keyword', None)
                                 if level3keyword:
                                     tablevel3keyword = level3keyword.split(',')
+                                for i, each in enumerate(tablevel3keyword):
+                                    tablevel3keyword[i] = each.strip().lower()
 
                                 level3action = request.form.get(str(x) + 'Level1' + str(y) + 'Level2' + str(z) + 'Level3Action', None)
 
@@ -111,6 +117,8 @@ def submit():
                                             level4keyword = request.form.get(str(x) + 'Level1' + str(y) + 'Level2' + str(z) + 'Level3' + str(a) + 'Level4Keyword', None)
                                             if level4keyword:
                                                 tablevel4keyword = level4keyword.split(',')
+                                            for i, each in enumerate(tablevel4keyword):
+                                                tablevel4keyword[i] = each.strip().lower()
 
                                             level4action = request.form.get(str(x) + 'Level1' + str(y) + 'Level2' + str(z) + 'Level3' + str(a) + 'Level4Action', None)
 

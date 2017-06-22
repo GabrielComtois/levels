@@ -2,13 +2,13 @@
   {
     "level1Name": "Top Intent",
     "level1Keywords": [
-      "Message Comes In"
+      "message"
     ],
     "level1level2": [
       {
         "level2Keywords": [
           "software",
-          " license"
+          "license"
         ],
         "level2level3": [
           {
@@ -16,7 +16,7 @@
             "level3Name": "Visio",
             "level3Keywords": [
               "diagrams",
-              " flowchart"
+              "flowchart"
             ]
           },
           {
@@ -24,7 +24,7 @@
             "level3Name": "Programming Environment",
             "level3Keywords": [
               "python",
-              " java"
+              "java"
             ]
           }
         ],
@@ -33,7 +33,7 @@
       {
         "level2Keywords": [
           "password",
-          " reset"
+          "reset"
         ],
         "level2Action": "Send password reset link",
         "level2Name": "Send password reset link"
@@ -41,19 +41,19 @@
       {
         "level2Keywords": [
           "move",
-          " change"
+          "change"
         ],
         "level2level3": [
           {
-            "level3Action": "fill out the form",
-            "level3Name": "fill out the move form...",
+            "level3Action": "fill out the form1",
+            "level3Name": "fill out the move form1...",
             "level3Keywords": [
               "building"
             ]
           },
           {
-            "level3Action": "fill out the form",
-            "level3Name": "fill out the move form...",
+            "level3Action": "fill out the form2",
+            "level3Name": "fill out the move form2...",
             "level3Keywords": [
               "city"
             ]
@@ -65,14 +65,14 @@
         "level2Keywords": [
           "video",
           "audio",
-          " conference"
+          "conference"
         ],
         "level2Action": "Ask the user to clarify sub-topic",
         "level2Name": "Ask the user to clarify sub-topic"
       },
       {
         "level2Keywords": [
-          "non-helpdesk related"
+          "helpdesk"
         ],
         "level2Action": "Small-talk engines",
         "level2Name": "Small-talk engines"
