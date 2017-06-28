@@ -1,26 +1,28 @@
-
-.center {
-    margin: auto;
-    width: 100%;
-    padding: 5px;
-}
-
 .city {
    float: left;
-   margin: 10px;
-   padding: 10px;
+
    width: 650px;
    height: 100px;
-   border-radius: 25px;
+   margin: 10px;
+   padding: 10px;
+
    border: 1px solid #9494b8;
+   border-radius: 25px;
 
 }
 
 .submit {
+	width: 650px;
 	margin: auto;
-	width: 650px;
-	padding: 10px;
   margin: 10px;
+	padding: 10px;
+}
+
+.center {
+    width: 70%;
+
+    margin: auto;
+    padding: 5px;
 }
 
 input:focus::-webkit-input-placeholder {

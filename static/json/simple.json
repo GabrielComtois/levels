@@ -1,10 +1,8 @@
-[
-   {
-      "level1Name":"test1",
-      "level1Keywords":[
-         "kw1",
-         " kw2"
-      ],
-      "level1Action":"download"
-   }
-]
+[{
+  "level1Name": "test1",
+  "level1Keywords": [
+    "kw1",
+    " kw2"
+  ],
+  "level1Action": "download"
+}]

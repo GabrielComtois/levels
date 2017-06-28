@@ -105,8 +105,7 @@
                   "level3Keywords",
                   "level3Name"
                 ],
-                "oneOf": [
-                  {
+                "oneOf": [{
                     "required": [
                       "level3Action"
                     ]
@@ -124,8 +123,7 @@
             "level2Keywords",
             "level2Name"
           ],
-          "oneOf": [
-            {
+          "oneOf": [{
               "required": [
                 "level2Action"
               ]
@@ -143,8 +141,7 @@
       "level1Keywords",
       "level1Name"
     ],
-    "oneOf": [
-      {
+    "oneOf": [{
         "required": [
           "level1Action"
         ]

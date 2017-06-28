@@ -12,7 +12,7 @@
         ],
         "level2level3": [
           {
-            "level3Action": "visio",
+            "level3Action": "Maybe you should install Visio.",
             "level3Name": "Visio",
             "level3Keywords": [
               "diagrams",
@@ -20,7 +20,7 @@
             ]
           },
           {
-            "level3Action": "prog. environment",
+            "level3Action": "Want some information about a new programming environment?",
             "level3Name": "Programming Environment",
             "level3Keywords": [
               "python",
@@ -35,7 +35,7 @@
           "password",
           "reset"
         ],
-        "level2Action": "Send password reset link",
+        "level2Action": "Here is a link to reset your password:",
         "level2Name": "Send password reset link"
       },
       {
@@ -45,14 +45,14 @@
         ],
         "level2level3": [
           {
-            "level3Action": "fill out the form1",
+            "level3Action": "Fill out this first form:",
             "level3Name": "fill out the move form1...",
             "level3Keywords": [
               "building"
             ]
           },
           {
-            "level3Action": "fill out the form2",
+            "level3Action": "Fill out this second form:",
             "level3Name": "fill out the move form2...",
             "level3Keywords": [
               "city"
@@ -67,14 +67,14 @@
           "audio",
           "conference"
         ],
-        "level2Action": "Ask the user to clarify sub-topic",
+        "level2Action": "What kind of audio/video service do you need?",
         "level2Name": "Ask the user to clarify sub-topic"
       },
       {
         "level2Keywords": [
-          "helpdesk"
+          "non-helpdesk"
         ],
-        "level2Action": "Small-talk engines",
+        "level2Action": "Let me transfer you to an agent.",
         "level2Name": "Small-talk engines"
       }
     ]
