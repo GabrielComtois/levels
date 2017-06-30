@@ -110,3 +110,13 @@ function rmvLevel1(clickedId) {
   var elem = document.getElementById(clickedId).parentElement.parentElement.parentElement.parentElement;
   elem.parentNode.removeChild(elem);
 }
+
+
+window.onload = function () {fileName()};
+function fileName() {
+    var today = new Date();
+    var string = "_" + (today.getMonth()+1) + "_" + today.getDate() + "_" + today.getFullYear() + ".json";
+    var newInput = '<input type="text" class="form-group right" id="fileNameString" name="fileNameString" size="20" placeholder="your_file_name">'
+    var hiddenField = '<input type="hidden" name="hiddenField" value="' + string + '">'
+    document.getElementById("fileName").innerHTML = newInput + string + hiddenField;
+}

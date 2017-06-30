@@ -12,7 +12,7 @@ import re
 import json
 
 app = Flask(__name__)
-maxNumberOfLevelsID = 200
+maxNumberOfLevelsID = 300
 
 
 @app.route('/')
@@ -135,4 +135,13 @@ def submit():
                 objectLevel1['level1level2'] = tabJsonLevel2
                 tabJsonLevel1.append(objectLevel1)
     finalJson = json.dumps(tabJsonLevel1)
+    hiddenField = request.form.get('hiddenField')
+
+    fileName = request.form.get('fileNameString')
+    saveFile(fileName + hiddenField, finalJson)
     return finalJson, 201
+
+
+def saveFile(fileName, json):
+    myFile = open("static/json/"+ fileName, "w")
+    myFile.write(json)
