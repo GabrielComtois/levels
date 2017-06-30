@@ -135,8 +135,8 @@ def submit():
                 objectLevel1['level1level2'] = tabJsonLevel2
                 tabJsonLevel1.append(objectLevel1)
     finalJson = json.dumps(tabJsonLevel1)
-    hiddenField = request.form.get('hiddenField')
 
+    hiddenField = request.form.get('hiddenField')
     fileName = request.form.get('fileNameString')
     if fileName == "":
         fileName = "NoFileNameEntered"
@@ -147,3 +147,4 @@ def submit():
 def saveFile(fileName, json):
     myFile = open("static/json/"+ fileName, "w")
     myFile.write(json)
+    myFile.close()
