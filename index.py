@@ -138,6 +138,8 @@ def submit():
     hiddenField = request.form.get('hiddenField')
 
     fileName = request.form.get('fileNameString')
+    if fileName == "":
+        fileName = "NoFileNameEntered"
     saveFile(fileName + hiddenField, finalJson)
     return finalJson, 201
 
